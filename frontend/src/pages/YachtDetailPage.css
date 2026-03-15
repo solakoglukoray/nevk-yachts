@@ -1,0 +1,27 @@
+/* src/pages/YachtDetailPage.css */
+
+.detail-page-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 24px;
+}
+.gallery-container, .description-section, .map-section {
+  background-color: #fff;
+  color: #333;
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.description-section h2, .map-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.description-section p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+/* Haritanın kendisi için bir container */
+.map-container iframe {
+  border-radius: 8px;
+}

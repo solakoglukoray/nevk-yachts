@@ -1,0 +1,73 @@
+/* src/pages/ContactPage.css */
+.contact-page-wrapper {
+  background-color: #3a5785; /* Referanstaki ana mavi arkaplan */
+  padding: 4rem 2rem;
+  color: white;
+}
+.contact-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+.contact-form-section h2,
+.contact-details-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.submit-button {
+  background-color: #f0f0f0;
+  color: #3a5785;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.submit-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+.contact-details-section p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+.map-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden; /* Köşelerin haritaya uygulanmasını sağlar */
+}
+.form-status {
+    margin-top: 1rem;
+    font-weight: 500;
+}

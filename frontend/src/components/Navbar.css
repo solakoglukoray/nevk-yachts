@@ -1,0 +1,139 @@
+/* src/components/Navbar.css */
+.navbar {
+  height: 100px; /* Logoyu büyüttüğümüz için yüksekliği artırdık */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+  position: absolute; /* Her zaman resmin üzerinde */
+  top: 60px; /* TopBar'ın altına yerleşir, aradaki boşluk ayarlandı */
+  left: 0;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+.navbar-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-image {
+  height: 140px !important; /* İSTEDİĞİNİZ BÜYÜK LOGO BOYUTU */
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  gap: 10px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-out;
+  border-radius: 5px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #fff; /* Yazı rengi her zaman beyaz */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Okunurluk için gölge */
+  background-color: rgba(69, 93, 122, 0.7); /* Referanstaki mavi-gri tonu */
+}
+.nav-links:hover {
+  background-color: rgba(69, 93, 122, 0.9);
+}
+
+/* Navbar.css dosyasının en altına ekleyin */
+
+/* Ekran genişliği 768px veya daha küçük olduğunda bu stiller uygulanacak */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 0 10px; /* Kenar boşluklarını azalt */
+  }
+  
+  .nav-menu {
+    gap: 5px; /* Butonlar arası boşluğu azalt */
+  }
+
+  .nav-links {
+    padding: 6px 8px; /* Butonların iç boşluğunu azalt */
+    font-size: 0.8rem; /* Yazı boyutunu küçült */
+  }
+
+  .logo-image {
+    height: 50px !important; /* Logoyu küçült */
+    min-height: 50px !important;
+    max-height: 50px !important;
+  }
+}
+
+/* Navbar.css dosyasının en altına ekleyin */
+
+/* Hamburger menü ikonu başlangıçta gizli olacak */
+.menu-icon {
+  display: none;
+}
+
+/* Ekran genişliği 960px veya daha küçük olduğunda... */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column; /* Linkleri alt alta diz */
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px; /* Navbar'ın bittiği yerden başla */
+    left: -100%; /* Başlangıçta ekranın solunda tamamen gizli */
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #242222; /* Açılan menünün arkaplanı */
+    left: 0; /* Ekrana soldan kayarak gel */
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  /* Hamburger menü ikonunu görünür yap */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}

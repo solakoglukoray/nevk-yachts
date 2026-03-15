@@ -1,0 +1,106 @@
+/* src/components/Hero.css - DİNAMİK YAZILI SLIDER VERSİYONU */
+
+.hero-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out; /* Resim değişimi için yumuşak geçiş */
+}
+
+.hero-container.fullscreen {
+  height: 100vh;
+}
+
+.hero-container.small {
+  height: 40vh; /* Ekranın %40'ı kadar */
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  /* Resimler arası geçiş animasyonu */
+  transition: opacity 2s ease-in-out; 
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px; /* Genişliği biraz artırdık */
+  
+  /* Yazılar için geçiş animasyonu */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem; /* Yazıyı biraz daha büyüttük */
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+  font-size: 1.7rem; /* Alt başlığı büyüttük */
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Her slayt değiştiğinde yazının da yumuşakça belirmesi için animasyon */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-container.small .hero-content h1 {
+  font-size: 3rem; /* Yazı boyutunu küçülttük (değeri artırıp azaltabilirsiniz) */
+  margin-top: 200px;  /* Başlığı aşağıya itmek için üstten boşluk verdik (değeri artırıp azaltabilirsiniz) */
+}
+
+/* Hero.css dosyasının en altına ekleyin */
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem; /* Ana başlığı küçült */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Alt başlığı küçült */
+  }
+
+  .page-header-content h1 {
+      font-size: 2.5rem; /* Diğer sayfa başlıklarını küçült */
+  }
+}
+

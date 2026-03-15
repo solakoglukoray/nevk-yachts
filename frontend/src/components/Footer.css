@@ -1,0 +1,97 @@
+/* src/components/Footer.css - YENİ TASARIM */
+
+.footer-container {
+  background-color: #3f759f; /* Sitenin genel arkaplanıyla aynı renk */
+  padding: 4rem 2rem; /* Üst/alt ve yan boşluklar */
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Öğeleri yukarıdan hizalar */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-contact, .footer-right, .footer-center {
+  flex: 1; /* Her bölüme eşit alan verir */
+}
+
+/* Sol Taraf: İletişim */
+.footer-contact h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  margin-top: 4px; /* İkonu metinle daha iyi hizalamak için */
+}
+
+.contact-item span {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Orta Kısım */
+.footer-center {
+    text-align: center;
+    padding-top: 1rem; /* Hafif üstten boşluk */
+}
+
+.footer-center h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Sağ Taraf: Logo ve Telif Hakkı */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* İçeriği sağa yaslar */
+  text-align: right;
+}
+
+.website-rights {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* src/components/Footer.css dosyasının sonuna ekleyin */
+
+/* Eski .social-logo stilini kaldırıp bunları ekleyebilirsiniz */
+.footer-logo-link {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-image {
+  height: 105px; /* Footer'daki logo için yükseklik, istediğiniz gibi ayarlayın */
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo-image:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 820px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-right {
+    align-items: center; /* Logoyu ve yazıyı ortalar */
+    margin-top: 2rem;
+  }
+}

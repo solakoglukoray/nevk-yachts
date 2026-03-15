@@ -1,0 +1,41 @@
+/* src/components/SpecsGrid.css */
+.specs-container {
+  background-color: #fff;
+  color: #333;
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.specs-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.specs-grid {
+  display: grid;
+  /* Ekran genişliğine göre 2, 3 veya 4 sütunlu olmasını sağlar */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; /* Hücreler arası boşluk */
+}
+
+.spec-item {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spec-label {
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.spec-value {
+  font-weight: bold;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,43 @@
+/* src/components/TopBar.css - NİHAİ VE TAM VERSİYON */
+
+.top-bar {
+  padding: 8px 0;
+  width: 100%;
+  z-index: 1001;
+  color: #fff;
+  position: absolute; /* Her zaman resmin üzerinde duracak */
+  top: 20px;       /* Ekranın en üstünden boşluk, bu değeri ayarlayabilirsiniz */
+  left: 0;
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between; /* Sol ve sağdaki elemanları iki uca yaslar */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.language-selector {
+  display: flex;
+  gap: 5px;
+}
+
+.lang-button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 3px 7px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lang-button:hover,
+.lang-button.active {
+  background-color: #fff;
+  color: #333;
+}

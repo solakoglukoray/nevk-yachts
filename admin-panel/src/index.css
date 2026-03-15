@@ -1,0 +1,33 @@
+/* admin-panel-frontend/src/index.css */
+
+/* Temel Sıfırlama ve Kutu Modelini Ayarlama */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Genel Sayfa Stilleri */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Admin panelinin ana arkaplan rengi */
+  background-color: #3f759f; /* Profesyonel ve göz yormayan bir gri tonu */
+}
+
+/* Genel Başlık Stilleri */
+h1, h2, h3, h4, h5, h6 {
+    color: #1a202c; /* Koyu bir başlık rengi */
+}
+
+/* Linkler için varsayılan stil kaldırma */
+a {
+    text-decoration: none;
+    color: inherit;
+}
